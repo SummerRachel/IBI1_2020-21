@@ -1,6 +1,0 @@
-I like apples
-I like a
-I like b
-I do not like c
-I like d
-I like e
