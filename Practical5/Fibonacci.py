@@ -1,5 +1,7 @@
 a=1
+#a as the first number
 b=1
+#b as the second number
 c=1
 #c is used for storing a
 i=1
