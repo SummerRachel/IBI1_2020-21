@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 a=np.array(gene_lengths)
 b=np.array(exon_counts)
 #get a new array which represents average exon length
-c=b/a
+c=a/b
 print(sorted(c))
 #print the boxplot
 plt.boxplot(c,vert=True,whis=1.5,patch_artist=True,meanline=False, showbox=True, showcaps= True, showfliers=True, notch = True)
