@@ -1,6 +1,6 @@
-Origin=input()
 def f(Origin):
 	Reverse=''
+	Result=''
 	for i in range (0,len(Origin)):
 		if Origin[i]=='T'or Origin[i]=='t':
 			Reverse+='A'
@@ -10,9 +10,12 @@ def f(Origin):
 			Reverse+='G'
 		elif Origin[i]=='G'or Origin[i]=='g':
 			Reverse+='C'
-	return Reverse
+	for i in range (0,len(Reverse)):
+		Result+=Reverse[len(Reverse)-1-i]
+	return Result
 
-print(Reverse)
+Origin=input()
+f(Origin)
 
 
 
