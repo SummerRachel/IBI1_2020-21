@@ -1,0 +1,13 @@
+alignment score:
+human-mouse:1091
+human-random:-250
+mouse-random:-250
+
+the percentage of identical amino acids:
+human-mouse: 23 identical 89.69%
+human-random: 210 identical 5.83%
+mouse-random: 209 identical 6.28%
+
+
+Structurally related amino acids have a positive score and more distant amino acid substitutions yield a negative score. The higher the score is, the closer the relationship between two species is.
+So I think humans and mice share similarity geneticcally because the score we gained from this group using the Blosum62 matrixes and the percentage of identical amino acids were  much higher than those statisics got from human-random group and mouse-random group. Humans and mice share the same ancestor and they are both mammals so they can have such evident similarity. 

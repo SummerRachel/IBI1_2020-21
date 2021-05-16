@@ -21,4 +21,5 @@ sizes=[a,b,c,d,e]
 explode=(0.1,0.1,0.1,0.1,0.1)
 plt.pie(sizes,explode=explode,labels=labels,autopct='%1.1f%%',shadow=False,startangle=90)
 plt.axis('equal')
+plt.title('Proportion of Infections which come from each of the top five most affected countries')
 plt.show()

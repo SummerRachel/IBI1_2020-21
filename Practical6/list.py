@@ -10,5 +10,5 @@ b=np.array(exon_counts)
 c=a/b
 print(sorted(c))
 #print the boxplot
-plt.boxplot(c,vert=True,whis=1.5,patch_artist=True,meanline=False, showbox=True, showcaps= True, showfliers=True, notch = True)
+plt.boxplot(c,vert=True,whis=1.5,patch_artist=True,meanline=False, showbox=True, showcaps= True, showfliers=True, notch = False)
 plt.show()
