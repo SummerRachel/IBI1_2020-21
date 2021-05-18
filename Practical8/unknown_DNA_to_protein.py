@@ -27,7 +27,6 @@ gene_code={'TTT':'F','TTC':'F','TTA':'L','TTG':'L',
  'CGT':'R','CGC':'R','CGA':'R','CGG':'R',
  'AGT':'S','AGC':'S','AGA':'A','AGG':'R',
  'GGT':'G','GGC':'G','GGA':'G','GGG':'G'}
-protein=''
 #create a file_read to read
 file_read=file_origin.read()
 #create a split to cut the file_read
@@ -39,6 +38,7 @@ for i in split:
 #get the DNA sequence of the gene
                 DNAseq=re.sub(r'.+]','',i)
                 b=re.sub(r'\n','',DNAseq)
+		protein=''
 #use for loop to do this task
 		for i in range(0,len(b),3):
         		recent=b[i:i+3]
@@ -50,10 +50,11 @@ for i in split:
 
                 for d in a:
 #write the gene name
-                     file.write(d)
-                     file.write('\t\t\t')
+			file.write(d)
+			file.write('\t')
 #write the length of gene
-                     file.write(str(len(protein)))
-                     file.write(protein)
+                   	file.write(str(len(protein)))
+			file.write('\t')
+                   	file.write(protein)
 
 file_origin.close()
