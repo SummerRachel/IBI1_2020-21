@@ -53,9 +53,9 @@ for i in split:
 			file.write(d)
 			file.write('\t')
 #write the length of gene
-                   	file.write(str(len(protein)))
+			file.write(str(len(protein)))
 			file.write('\t')
-                   	file.write(protein)
+			file.write(protein)
 			file.write('\t')
 
 file_origin.close()
