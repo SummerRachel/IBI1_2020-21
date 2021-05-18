@@ -4,7 +4,7 @@ human-random:-250
 mouse-random:-250
 
 the percentage of identical amino acids:
-human-mouse: 89.69%
+human-mouse: 89.64%
 human-random: 5.41%
 mouse-random: 5.86%
 
