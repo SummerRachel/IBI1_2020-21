@@ -6,4 +6,5 @@ Code line:48th
 1.For the number of total cases in China, it was increasing all the time.
 And it increased rapidly between 2020-01-24 and 2020-03-04.
 2.For the number of new cases in China, it was bigger than 0 between 2020-01-24 and 2020-03-04, while other time it was 0 or a bit bigger than 0.
+The results are within my expectation.
 That is because during the time between 2020-01-24 and 2020-03-04, China had a massive outbreak of the disease. After this time period, the government had taken a series of measures to lower the number of new cases thus the increase of total cases slowed down.
