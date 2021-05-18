@@ -30,8 +30,11 @@ def find(j,term):
     else:
         for a in is_a:
             parentid = a.childNodes[0].data
+#get the parentid	
             s = re.findall(':(\d.*)$',parentid)
+#change the parentid into numbers	
             digitid = int(s[0])
+#use these numbers to locate the fatherterm	
             fatherterm = terms[loc[digitid]]
             defstr = fatherterm.getElementsByTagName('defstr')[0]
             d = defstr.childNodes[0].data
@@ -77,7 +80,7 @@ print('The Number of ChildNodes Associated with Carbohydrate:',CHcounter)
 
 #draw a pie chart related to these four numbers
 labels='DNA-associated\n'+str(DNAcounter),'RNA-associated\n'+str(RNAcounter),'Protein-associated\n'+str(Proteincounter),'Carbohydrate-associated\n'+str(CHcounter)
-plt.pie([DNAcounter,RNAcounter,Proteincounter,CHcounter],explode=True,labels=labels,colors=('r','b','c','g'),autopct='%1.2f%%',pctdistance=0.7,shadow=True, labeldistance=1.3,startangle=0,radius=1.2,counterclock=True,wedgeprops=None,textprops=None,center=(0,0),frame=False)
+plt.pie([DNAcounter,RNAcounter,Proteincounter,CHcounter],explode=None,labels=labels,colors=('r','b','c','g'),autopct='%1.2f%%',pctdistance=0.7,shadow=True, labeldistance=1.3,startangle=0,radius=1.2,counterclock=True,wedgeprops=None,textprops=None,center=(0,0),frame=False)
 plt.title('Numbers of ChildNodes of Associated with DNA,RNA,Protein and Carbohydrate in the Gene Ontology')
 plt.axis('equal')
 plt.show()
