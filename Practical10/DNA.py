@@ -14,6 +14,8 @@ def f(Origin):
 		Result+=Reverse[len(Reverse)-1-i]
 	return Result
 
+print("The example sequence is 'ATCGTAGC'")
+print("The result is ",f('ATCGTAGC'))
 Origin=input()
 f(Origin)
 
