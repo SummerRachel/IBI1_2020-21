@@ -41,7 +41,7 @@ plt.show()
 #plot both new cases and new deaths worldwide
 plt.plot(world_date,world_data,'b+',label='New Cases')
 plt.plot(world_date,world_death,'r+',label='New deaths')
-plt.legend(['New Cases','New deaths'],loc='upper left')
+plt.legend(['New Cases','New Deaths'],loc='upper left')
 plt.ylabel('The Number of Covid Cases')
 plt.xlabel('Date')
 plt.xticks(world_date.iloc[0:len(world_date):4],rotation=-90)
