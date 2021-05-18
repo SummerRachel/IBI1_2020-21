@@ -1,7 +1,7 @@
 Question:
 How have new cases and total cases developed over time in China?
 
-Code line:48th
+Question Code starts at line 50th
 
 1.For the number of total cases in China, it was increasing all the time.
 And it increased rapidly between 2020-01-24 and 2020-03-04.
