@@ -49,7 +49,7 @@ plt.show()
 #asking one other question code
 China=[]
 for i in range (0,7996):
-        if covid_data.loc[i,"location"]=="China":
+	if covid_data.loc[i,"location"]=="China":
 		flag=True
 		China.append(flag)
 	else:
