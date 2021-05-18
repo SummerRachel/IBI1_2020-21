@@ -10,5 +10,8 @@ class Grade(object):
 		return self.final
 #use an example to check the code
 print('Example: Name:zy Code_score:100 Poster_score:90 Exam_score:100')
+
 example=Grade('zy',100,90,100,0)
+
+
 print('Example Name:',example.name,' ','Example final score:',example.calculator())
