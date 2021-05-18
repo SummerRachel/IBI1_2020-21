@@ -40,8 +40,8 @@ for i in split:
                 DNAseq=re.sub(r'.+]','',i)
                 b=re.sub(r'\n','',DNAseq)
 #use for loop to do this task
-		for i in range(0,len(DNAseq),3):
-        		recent=DNAseq[i:i+3]
+		for i in range(0,len(b),3):
+        		recent=b[i:i+3]
 #stop coding if we meet X/O/U
         		if recent=='X'or recent=='O'or recent=='U':
                 		break
