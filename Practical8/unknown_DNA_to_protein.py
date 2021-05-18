@@ -56,5 +56,6 @@ for i in split:
                    	file.write(str(len(protein)))
 			file.write('\t')
                    	file.write(protein)
+			file.write('\t')
 
 file_origin.close()
