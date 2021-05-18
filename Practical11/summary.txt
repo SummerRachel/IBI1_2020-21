@@ -4,9 +4,9 @@ human-random:-250
 mouse-random:-250
 
 the percentage of identical amino acids:
-human-mouse: 23 identical 89.69%
-human-random: 210 identical 5.83%
-mouse-random: 209 identical 6.28%
+human-mouse: 89.69%
+human-random: 5.41%
+mouse-random: 5.86%
 
 
 Structurally related amino acids have a positive score and more distant amino acid substitutions yield a negative score. The higher the score is, the closer the relationship between two species is.

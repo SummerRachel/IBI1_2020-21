@@ -1,1 +1,5 @@
-do not know
+Question:
+How have new cases and total cases developed over time in China?
+
+Code line:40th
+

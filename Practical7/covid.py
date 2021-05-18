@@ -34,21 +34,32 @@ world_death=covid_data.loc[world,'new_deaths']
 np.mean(world_data)
 np.median(world_data)
 #create a boxplot of new cases worldwide
-plt.plot(world_date,world_data,'b+')
-plt.plot(world_date,world_death,'r+')
+plt.boxplot(world_data)
 plt.show()
 #plot both new cases and new deaths worldwide
+plt.plot(world_date,world_data,'b+')
+plt.plot(world_date,world_death,'r+')
+plt.ylabel('The Number of Covid Cases')
+plt.xlabel('Date')
+plt.xticks(world_date.iloc[0:len(world_date):4],rotation=-90)
+plt.title('The Numbers of New Cases And New Deaths Worldwide Over Time')
+plt.show()
+#asking one other question code
 China=[]
 for i in range (0,7996):
         if covid_data.loc[i,"location"]=="China":
                 flag=True
-                L.append(flag)
+                China.append(flag)
         else:
              	flag=False
-                L.append(flag)
+                China.append(flag)
 China_total=covid_data.loc[China,"total_cases"]
 China_new=covid_data.loc[China,"new_cases"]
 China_date=covid_data.loc[China,"date"]
 plt.plot(China_date,China_total,'b+')
 plt.plot(China_date,China_new,'r+')
+plt.xticks(China_date.iloc[0:len(China_date):4],rotation=-90)
+plt.xlabel('Date')
+plt.ylabel('The Numbers of Covid Cases')
+plt.title('The Numbers of New Cases And Total Cases In China Over Time')
 plt.show()
