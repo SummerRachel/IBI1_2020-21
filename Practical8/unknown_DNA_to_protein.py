@@ -32,23 +32,23 @@ file_read=file_origin.read()
 #create a split to cut the file_read
 split=re.split('>',file_read)
 for i in split:
-        if'unknown function' in i:
+	if'unknown function' in i:
 #get the name of the gene
-                a=re.findall(r'gene:(.+?)\s',i)
+		a=re.findall(r'gene:(.+?)\s',i)
 #get the DNA sequence of the gene
-                DNAseq=re.sub(r'.+]','',i)
-                b=re.sub(r'\n','',DNAseq)
+		DNAseq=re.sub(r'.+]','',i)
+		b=re.sub(r'\n','',DNAseq)
 		protein=''
 #use for loop to do this task
 		for i in range(0,len(b),3):
         		recent=b[i:i+3]
 #stop coding if we meet X/O/U
-        		if recent=='X'or recent=='O'or recent=='U':
-                		break
-        		else:
+			if recent=='X'or recent=='O'or recent=='U':
+				break
+			else:
 				protein+=gene_code[recent]
 
-                for d in a:
+		for d in a:
 #write the gene name
 			file.write(d)
 			file.write('\t')
