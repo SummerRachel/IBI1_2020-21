@@ -50,9 +50,9 @@ plt.show()
 China=[]
 for i in range (0,7996):
         if covid_data.loc[i,"location"]=="China":
-                flag=True
-                China.append(flag)
-        else:
+		flag=True
+		China.append(flag)
+	else:
 		flag=False
 		China.append(flag)
 China_total=covid_data.loc[China,"total_cases"]
