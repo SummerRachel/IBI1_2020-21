@@ -2,6 +2,7 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import re
 os.chdir('/Users/xiaziyu')
 #read the origin file and create a new file
 file_origin=open('Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa','r')
