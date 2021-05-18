@@ -1,7 +1,7 @@
 There are 3 flaws in my formative ICA.
 The first one is about week4 practical.
-It said I had no content that was different from the template file.
-So I add some words in the file.
+It said I had no content that was different from the template github page.
+So I added some words in the index.md to introduce myself.
 The second one is about pie.py in the week6 practical.
 It said my pie chart did not include a title.
 So I added the title to the pie chart.
