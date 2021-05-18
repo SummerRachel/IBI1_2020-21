@@ -35,6 +35,8 @@ np.mean(world_data)
 np.median(world_data)
 #create a boxplot of new cases worldwide
 plt.boxplot(world_data)
+plt.title('The Boxplot of New Cases Worldewide Over Time')
+plt.ylabel('The Number of Covid Cases')
 plt.show()
 #plot both new cases and new deaths worldwide
 plt.plot(world_date,world_data,'b+')
