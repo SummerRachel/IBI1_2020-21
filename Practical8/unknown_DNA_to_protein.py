@@ -8,8 +8,8 @@ os.chdir('/Users/xiaziyu')
 #read the origin file and create a new file
 file_origin=open('Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa','r')
 #input a new file name
-name=input()
-file=open('name.fa','w')
+name=input('Please input the filename(Remember to include '.fa' in the name):')
+file=open(name,'w')
 #create a storage for coding
 gene_code={'TTT':'F','TTC':'F','TTA':'L','TTG':'L',
  'CTT':'L','CTC':'L','CTA':'L','CTG':'L',
