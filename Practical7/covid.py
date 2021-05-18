@@ -39,8 +39,8 @@ plt.title('The Boxplot of New Cases Worldewide Over Time')
 plt.ylabel('The Number of Covid Cases')
 plt.show()
 #plot both new cases and new deaths worldwide
-plt.plot(world_date,world_data,'b+')
-plt.plot(world_date,world_death,'r+')
+plt.plot(world_date,world_data,'b+',label='New Cases')
+plt.plot(world_date,world_death,'r+',label='New deaths')
 plt.ylabel('The Number of Covid Cases')
 plt.xlabel('Date')
 plt.xticks(world_date.iloc[0:len(world_date):4],rotation=-90)
@@ -58,8 +58,8 @@ for i in range (0,7996):
 China_total=covid_data.loc[China,"total_cases"]
 China_new=covid_data.loc[China,"new_cases"]
 China_date=covid_data.loc[China,"date"]
-plt.plot(China_date,China_total,'b+')
-plt.plot(China_date,China_new,'r+')
+plt.plot(China_date,China_total,'b+',label='Total Cases')
+plt.plot(China_date,China_new,'r+',label='New Cases')
 plt.xticks(China_date.iloc[0:len(China_date):4],rotation=-90)
 plt.xlabel('Date')
 plt.ylabel('The Numbers of Covid Cases')
