@@ -51,8 +51,8 @@ for i in range (0,7996):
                 flag=True
                 China.append(flag)
         else:
-             	flag=False
-                China.append(flag)
+		flag=False
+		China.append(flag)
 China_total=covid_data.loc[China,"total_cases"]
 China_new=covid_data.loc[China,"new_cases"]
 China_date=covid_data.loc[China,"date"]
