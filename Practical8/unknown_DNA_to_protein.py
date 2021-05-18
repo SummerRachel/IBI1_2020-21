@@ -41,7 +41,7 @@ for i in split:
 		protein=''
 #use for loop to do this task
 		for i in range(0,len(b),3):
-        		recent=b[i:i+3]
+			recent=b[i:i+3]
 #stop coding if we meet X/O/U
 			if recent=='X'or recent=='O'or recent=='U':
 				break
