@@ -1,4 +1,6 @@
 import re
+import os
+os.chdir('/Users/xiaziyu')
 f1=open('SOD2_human.fa','r')
 f2=open('SOD2_mouse.fa','r')
 f3=open('RandomSeq.fa','r')
@@ -14,24 +16,6 @@ random=seq3.pop(1)
 print (seq1.pop(0),human)
 print (seq2.pop(0),mouse)
 print (seq3.pop(0),random)
-for i in range(len(human)):
-  if human[i]!=mouse[i]:
-     edit_distance1 +=1
-per1=(1-(edit_distance1/len(human)))*100
-print ('human-mouse:',edit_distance1,'identical percentage:','%.2f%%'%per1)
-
-for i in range(len(human)):
-  if human[i]!=random[i]:
-     edit_distance2 +=1
-per2=(1-(edit_distance2/len(human)))*100
-print ('human-random:',edit_distance2,'identical percentage:','%.2f%%'%per2)
-
-for i in range(len(mouse)):
-  if mouse[i]!=random[i]:
-     edit_distance3 +=1
-per3=(1-(edit_distance3/len(mouse)))*100
-print ('mouse-random:',edit_distance3,'identical percentage:','%.2f%%'%per3)
-
 blosum62 = {
      'WF': 1,'LR': -2,'SP': -1, 'VT': 0,
     'QQ': 5, 'NA': -2,'ZY': -2, 'WR': -3,
@@ -51,7 +35,8 @@ blosum62 = {
     'ZW': -3, 'FE': -3, 'DN': 1, 'BK': 0,
     'XX': -1, 'FI': 0, 'BG': -1, 'XT': 0,
     'FM': 0, 'BC': -3, 'ZI': -3, 'ZV': -2,
-    'SS': 4, 'LQ': -2, 'WE': -3, 'QR': 1,'NN': 6, 'WM': -1, 'QC': -3, 'WI': -3,
+    'SS': 4, 'LQ': -2, 'WE': -3, 'QR': 1,
+    'NN': 6, 'WM': -1, 'QC': -3, 'WI': -3,
     'SC': -1, 'LA': -1, 'SG': 0, 'LE': -3,
     'WQ': -2, 'HG': -2, 'SK': 0, 'QN': 0,
     'NR': 0, 'HC': -3, 'YN': -2, 'GQ': -2,
@@ -97,10 +82,30 @@ blosum62 = {
     'KN': 0, 'II': 4, 'PA': -1, 'MG': -3,
     'TS': 1, 'IE': -3, 'PM': -2, 'MK': -1,
     'IA': -1, 'PI': -3, 'RR': 5, 'XM': -1,
-    'LI': 2, 'XI': -1, 'ZB': 1,'XE': -1,
+    'LI': 2, 'XI': -1, 'ZB': 1, 'XE': -1,
     'ZN': 0, 'XA': 0, 'BR': -1, 'BN': 3,
     'FD': -3, 'XY': -1, 'ZR': 0, 'FH': -1,
     'BF': -3, 'FL': 0, 'XQ': -1, 'BB': 4}
+for i in range(len(human)):
+  if human[i]!=mouse[i]:
+     edit_distance1 +=1
+print (human)
+per1=(1-(edit_distance1/len(human)))*100
+print ('human-mouse:',edit_distance1,'identical percentage:','%.2f%%'%per1)
+
+for i in range(len(human)):
+  if human[i]!=random[i]:
+     edit_distance2 +=1
+per2=(1-(edit_distance2/len(human)))*100
+print ('human-random:',edit_distance2,'identical percentage:','%.2f%%'%per2)
+
+for i in range(len(mouse)):
+  if mouse[i]!=random[i]:
+     edit_distance3 +=1
+per3=(1-(edit_distance3/len(mouse)))*100
+print ('mouse-random:',edit_distance3,'identical percentage:','%.2f%%'%per3)
+
+
 
 list1=''
 list2=''
@@ -117,27 +122,27 @@ score2=0
 score3=0
 for i in range(0,len(list1),2):
   recent0=list1[i:i+2]
-  recent1=list1[i+2:i]
+  recent1=recent0[::-1]
   if recent0 in blosum62:
     score1+=blosum62[recent0]
   elif recent1 in blosum62:
     score1+=blosum62[recent1]
-print (score1)
+print ('human-mouse',score1)
 
 for i in range(0,len(list2),2):
   recent0=list2[i:i+2]
-  recent1=list2[i+2:i]
+  recent1=recent0[::-1]
   if recent0 in blosum62:
     score2+=blosum62[recent0]
   elif recent1 in blosum62:
     score2+=blosum62[recent1]
-print (score2)
+print ('human-random',score2)
 
 for i in range(0,len(list3),2):
   recent0=list3[i:i+2]
-  recent1=list3[i+2:i]
+  recent1=recent0[::-1]
   if recent0 in blosum62:
     score3+=blosum62[recent0]
   elif recent1 in blosum62:
     score3+=blosum62[recent1]
-print (score3)
+print ('mouse-random',score3)
